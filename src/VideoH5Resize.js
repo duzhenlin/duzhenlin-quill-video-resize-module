@@ -24,7 +24,6 @@ const knownModules = {
 export default class VideoH5Resize {
 
 	constructor(quill, options = {}) {
-		alert(12)
 		// save the quill reference and options
 		this.quill = quill
 
@@ -75,7 +74,8 @@ export default class VideoH5Resize {
 			if (this.vid) {
 
 				if (evt.keyCode == 46 || evt.keyCode == 8) {
-					q.find(this.vid).deleteAt(0)
+
+					window.Quill.find(this.vid).deleteAt(0)
 				}
 				this.hide()
 			}
@@ -109,29 +109,34 @@ export default class VideoH5Resize {
 	}
 
 	handleClick(evt) {
-		if (evt.target === this.quill.root) {
-			const videosH5 = this.quill.root.querySelectorAll('video')
-			console.log(videosH5);
-			const videos = this.quill.root.querySelectorAll('iframe')
+		console.log(evt);
+		if (evt.target !== this.quill.root) {
+
+			const videos = this.quill.root.querySelectorAll('video')
 
 			for (let i = 0; i < videos.length; ++i) {
 				const rect = videos[i].getBoundingClientRect()
+				//
 				if (evt.clientX < rect.x - 5) {
 					continue
 				}
+
 				if (evt.clientX > rect.right + 5) {
 					continue
 				}
+
 				if (evt.clientY < rect.y) {
 					continue
 				}
+
 				if (evt.clientY > rect.bottom) {
 					continue
 				}
+			
 
-				if (videos[i] && videos[i].tagName && videos[i].tagName.toUpperCase() === 'IFRAME') {
+				if (videos[i] && videos[i].tagName && videos[i].tagName.toUpperCase() === 'VIDEO') {
 
-
+					console.log(123);
 					if (this.vid === videos[i]) {
 						// we are already focused on this video
 						return

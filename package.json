@@ -1,6 +1,6 @@
 {
   "name": "duzhenlin-quill-video-resize-module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A module for Quill rich text editor to allow video to be resized.",
   "main": "video-H5-resize.min.js",
   "scripts": {
