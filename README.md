@@ -4,6 +4,7 @@ A module for Quill rich text editor to allow video to be resized.
 ## Usage
 
 ### install 
+####请安装1.1以上版本
 ```javascript
 npm i duzhenlin-quill-video-resize-module
 ```
