@@ -13,15 +13,15 @@ npm i duzhenlin-quill-video-resize-module
 
 ```javascript
 import Quill from 'quill';
-import VideoResize from 'quill-video-resize-module';
+import VideoH5Resize from 'duzhenlin-quill-video-resize-module'
 
-Quill.register('modules/VideoResize', VideoResize);
+Quill.register('modules/VideoH5Resize', VideoH5Resize);
 
 const quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        videoResize: {
+        VideoH5Resize: {
             // See optional "config" below
         }
     }
@@ -49,7 +49,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             // See optional "config" below
         }
     }
@@ -72,7 +72,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {}
+        VideoH5Resize: {}
     }
 });
 
@@ -84,7 +84,7 @@ const quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
         }
     }
@@ -104,7 +104,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             // ...
             handleStyles: {
                 backgroundColor: 'black',
@@ -128,7 +128,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             // ...
             displayStyles: {
                 backgroundColor: 'black',
@@ -152,7 +152,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             // ...
             toolbarStyles: {
                 backgroundColor: 'black',
@@ -189,7 +189,7 @@ var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        VideoResize: {
+        VideoH5Resize: {
             modules: [ MyModule, Resize ],
             // ...
         }
